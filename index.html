@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="todo-window-container">
+            <div class="today-menu-button todo-grid-section js-today-button">
+                <div class="today-calendar-container">
+                    <img class="blank-calendar-icon" src="images/blank_calendar_icon.png">
+                    <p class="today-number">67</p>
+                </div>
+                <p class="active-today-todos">0</p>
+                <p class="today-menu-title">Today</p>
+            </div>
+
+            <div class="scheduled-menu-button todo-grid-section js-scheduled-menu-button">
+                <img class="scheduled-calendar-icon" src="images/filled_calendar_icon.png">
+                <p class="active-scheduled-todos">0</p>
+                <p class="scheduled-menu-title">Scheduled</p>
+            </div>
+
+            <div class="all-menu-button todo-grid-section js-all-menu-button">
+                <img class="all-inbox-icon" src="images/inbox_icon.png">
+                <p class="active-all-todos">0</p>
+                <p class="all-menu-title">All</p>
+            </div>
+
+            <div class="flagged-menu-button todo-grid-section js-flagged-menu-button">
+                <img class="flagged-icon" src="images/flag_icon.png">
+                <p class="active-flagged-todos">0</p>
+                <p class="flagged-menu-title">Flagged</p>
+            </div>
+
+            <div class="urgent-menu-button todo-grid-section js-urgent-menu-button">
+                <img class="urgent-icon" src="images/clock_icon.png">
+                <p class="active-urgent-todos">0</p>
+                <p class="urgent-menu-title">Urgent</p>
+            </div>
+
+            <div class="completed-menu-button todo-grid-section js-completed-menu-button">
+                <img class="completed-icon" src="images/checkmark_icon.png">
+                <p class="completed-menu-title">Completed</p>
+            </div>
+        </div>
+        <div class="add-button-container">
+            <button class="add-todo-button js-add-todo-button">
+                <span>+</span>
+            </button>
+        </div>
+
+        <!-- Add Todo Window HTML Start-->
+
+        <div class="add-todo-container js-add-todo-container">
+            <div class="add-todo-menu-top-row">
+                <button class="close-add-todo-menu-button js-close-add-todo-menu-button">
+                    <span>X</span>
+                </button>
+                <p class="create-reminder-title">
+                    New Reminder
+                </p>
+                <button class="create-reminder-button js-create-reminder-button">
+                    <span>&check;</span>
+                </button>
+            </div>
+
+            <div class="todo-info-container">
+                <input class="todo-title-input js-todo-title-input" type="text" placeholder="Title">
+                <input class="todo-notes-input js-todo-notes-input" type="text" placeholder="Notes">
+                <div class="separation-line"></div>
+                <input class="todo-url-input js-todo-url-input" type="url" placeholder="URL">
+            </div>
+
+            <p class="date-and-time-title">
+                Date & Time
+            </p>
+
+            <div class="date-and-time-container js-date-and-time-container">
+                <div class="date-row">
+                    <img class="calendar-icon" src="images/date_calendar_icon.png">
+                    <p class="date-row-title">Date</p>
+                    <label class="switch date-switch">
+                        <input type="checkbox" role="switch">
+                        <span class="slider date-slider js-date-slider"></span>
+                    </label>
+                </div>
+                <div class="date-input-container js-date-input-container">
+                    <div class="add-todo-separation-line"></div>
+                    <input class="date-input js-date-input" type="text" placeholder="DD-MM-YYYY">
+                </div>
+
+                <div class="add-todo-separation-line"></div>
+
+                <div class="time-row">
+                    <img class="clock-icon" src="images/time_clock_icon.png">
+                    <p class="time-row-title">Time</p>
+                    <label class="switch time-switch">
+                        <input type="checkbox" role="switch">
+                        <span class="slider time-slider js-time-slider"></span>
+                    </label>
+                </div>
+                <div class="time-input-container js-time-input-container">
+                    <div class="add-todo-separation-line"></div>
+                    <input class="time-input js-time-input" type="text" placeholder="HH:MM-(A/P)M">
+                </div>
+
+                <div class="add-todo-separation-line"></div>
+
+                <div class="urgent-row">
+                    <img class="urgent-clock-icon" src="images/urgent_clock_icon.png">
+                    <p class="urgent-clock-row-title">Urgent</p>
+                    <label class="switch urgent-clock-switch">
+                        <input class="js-urgent-input" type="checkbox" role="switch">
+                        <span class="slider urgent-clock-slider urgent-clock-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Todo Window HTML End -->
+
+        <script type="module" src="script.js"></script>
+    </body>
+</html>

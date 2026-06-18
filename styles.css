@@ -1,0 +1,570 @@
+body {
+    background-color: black;
+    user-select: none;
+}
+
+p {
+    font-family: Arial;
+    margin: 0px;
+    color: white;
+}
+
+.todo-window-container {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    row-gap: 15px;
+    column-gap: 15px;
+    margin: 50px 0px 0px 50px;
+}
+
+.todo-grid-section {
+    height: 200px;
+    width: 500px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-grid-section:hover {
+    transform: scale(1.01);
+}
+
+.todo-grid-section:active {
+    transform: scale(0.98);
+}
+
+.blank-calendar-icon {
+    height: 70px;
+    width: 70px;
+}
+
+.scheduled-calendar-icon {
+    height: 70px;
+    width: 70px;
+}
+
+.all-inbox-icon {
+    width: 70px;
+}
+
+.flagged-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.urgent-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.completed-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.today-menu-button {
+    background-image: linear-gradient(90deg, rgb(99, 174, 233), rgb(75, 156, 224));
+}
+
+.scheduled-menu-button {
+    background-image: linear-gradient(90deg, rgb(236, 136, 138), rgb(230, 113, 121));
+}
+
+.all-menu-button {
+    background-image: linear-gradient(90deg, rgb(70, 70, 70), rgb(57, 57, 57));
+}
+
+.flagged-menu-button {
+    background-image: linear-gradient(90deg, rgb(241, 188, 132), rgb(237, 174, 120));
+}
+
+.urgent-menu-button {
+    background-image: linear-gradient(90deg, rgb(235, 125, 159), rgb(230, 108, 143));
+}
+
+.completed-menu-button {
+    background-image: linear-gradient(90deg, rgb(150, 156, 163), rgb(135, 141, 148));
+}
+
+/*Today todo*/
+.today-calendar-container {
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.blank-calendar-icon {
+    margin: 25px 0px 0px 28px;
+    height: 85px;
+    width: 85px;
+}
+
+.today-number {
+    position: relative;
+    top: 49px;
+    right: 65px;
+    font-weight: bold;
+    font-size: 43px;
+}
+
+.active-today-todos {
+    display: inline-block;
+    margin: 20px 0px 0px 265px;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.today-menu-title {
+    margin: 28px 0px 0px 28px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*Scheduled todo*/
+.scheduled-calendar-icon {
+    margin: 25px 0px 0px 28px;
+    height: 85px;
+    width: 85px;
+    vertical-align: top;
+}
+
+.active-scheduled-todos {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0px 0px 312px;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.scheduled-menu-title {
+    margin: 28px 0px 0px 28px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*All todo*/
+.all-inbox-icon {
+    margin: 25px 0px 0px 28px;
+    height: 85px;
+    width: 85px;
+    vertical-align: top;
+    object-fit: contain;
+}
+
+.active-all-todos {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0px 0px 312px;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.all-menu-title {
+    margin: 28px 0px 0px 28px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*Flagged todo*/
+.flagged-icon {
+    margin: 25px 0px 0px 28px;
+    height: 85px;
+    width: 85px;
+    vertical-align: top;
+    object-fit: contain;
+}
+
+.active-flagged-todos {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0px 0px 312px;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.flagged-menu-title {
+    margin: 28px 0px 0px 28px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*Urgent todo*/
+.urgent-icon {
+    margin: 25px 0px 0px 28px;
+    height: 85px;
+    width: 85px;
+    vertical-align: top;
+    object-fit: contain;
+}
+
+.active-urgent-todos {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0px 0px 312px;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.urgent-menu-title {
+    margin: 28px 0px 0px 28px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*Completed todo*/
+.completed-icon {
+    margin: 25px 0px 0px 28px;
+    height: 85px;
+    width: 85px;
+    vertical-align: top;
+    object-fit: contain;
+}
+
+.completed-menu-title {
+    margin: 28px 0px 0px 28px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.add-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.add-todo-button {
+    margin-right: 146px;
+    margin-top: 40px;
+    width: 90px;
+    height: 90px;
+    border: none;
+    border-radius: 50%;
+    background-image: linear-gradient(145deg, #2196f3, #1e88e5);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 0 0 2px rgba(79, 195, 247, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-todo-button span {
+    color: #7fe8d5;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.add-todo-button:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 0 0 3px rgba(79, 195, 247, 0.6);
+}
+
+.add-todo-button:active {
+    transform: scale(0.97);
+}
+
+.add-todo-container {
+    background-color: rgb(29, 29, 29);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border-radius: 50px;
+    height: 1150px;
+    width: 1150px;
+}
+
+.add-todo-menu-top-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.close-add-todo-menu-button {
+    margin-top: 30px;
+    margin-right: 200px;
+    width: 90px;
+    height: 90px;
+    border: none;
+    border-radius: 50%;
+    background-image: linear-gradient(145deg, #3a3a3a, #2e2e2e);
+    box-shadow: inset 0 1px 2px rgba(156, 156, 156, 0.3), 0 0 0 2px rgba(32, 32, 32, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.close-add-todo-menu-button span {
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.close-add-todo-menu-button:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 0 0 3px rgba(51, 51, 51, 0.6);
+}
+
+.close-add-todo-menu-button:active {
+    transform: scale(0.97);
+}
+
+.create-reminder-button {
+    margin-top: 30px;
+    margin-left: 200px;
+    width: 90px;
+    height: 90px;
+    border: none;
+    border-radius: 50%;
+    background-image: linear-gradient(145deg, #3a3a3a, #2e2e2e);
+    box-shadow: inset 0 1px 2px rgba(156, 156, 156, 0.3), 0 0 0 2px rgba(32, 32, 32, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.create-reminder-button span {
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.create-reminder-button:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 0 0 3px rgba(51, 51, 51, 0.6);
+}
+
+.create-reminder-button:active {
+    transform: scale(0.97);
+}
+
+.create-reminder-title {
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.todo-info-container {
+    border-radius: 40px;
+    height: 185px;
+    width: 1050px;
+    margin-left: 50px;
+    background-color: rgb(43, 43, 43);
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.todo-title-input {
+    margin: 0px 0px 20px 20px;
+    display: block;
+    width: 90%;
+    font-size: 30px;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    outline: none;
+    caret-color: #2196f3;
+    color: white;
+    font-weight: bold;
+}
+
+.todo-title-input::placeholder {
+    font-weight: normal;
+}
+
+.todo-notes-input {
+    margin: 0px 0px 10px 20px;
+    display: block;
+    width: 90%;
+    font-size: 30px;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    outline: none;
+    caret-color: #2196f3;
+    color: white;
+}
+
+.todo-url-input {
+    margin: 0px 0px 10px 20px;
+    display: block;
+    width: 90%;
+    font-size: 30px;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    outline: none;
+    caret-color: #2196f3;
+    color: white;
+}
+
+.separation-line {
+    height: 1px;
+    width: 1000px;
+    margin-left: 20px;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+.date-and-time-title {
+    margin-top: 50px;
+    margin-left: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(133, 133, 133);
+}
+
+/* The container wrapper for the switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide the default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The track/background slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* The circular knob inside the switch */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Track color changes to green when checked */
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+/* Knob slides to the right when checked */
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+.date-and-time-container {
+    border-radius: 40px;
+    height: auto;
+    width: 1050px;
+    margin-left: 50px;
+    background-color: rgb(43, 43, 43);
+    margin-top: 30px;
+    padding-top: 18px;
+}
+
+.date-row {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-icon {
+    width: 50px;
+    margin-left: 30px;
+}
+
+.date-row-title {
+    display: inline;
+    margin-left: 25px;
+    font-size: 30px;
+}
+
+.date-switch {
+    margin-left: 780px;
+}
+
+.add-todo-separation-line {
+    height: 1px;
+    width: 900px;
+    background-color: gray;
+    margin: 5px 0px 0px 100px;
+}
+
+.date-input {
+    margin: 10px 0px 10px 100px;
+    display: block;
+    width: 90%;
+    font-size: 30px;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    outline: none;
+    caret-color: #2196f3;
+    color: white;
+}
+
+.time-row {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.clock-icon {
+    width: 50px;
+    margin-left: 30px;
+}
+
+.time-row-title {
+    display: inline;
+    margin-left: 25px;
+    font-size: 30px;
+}
+
+.time-switch {
+    margin-left: 780px;
+}
+
+.time-input {
+    margin: 10px 0px 10px 100px;
+    display: block;
+    width: 90%;
+    font-size: 30px;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    outline: none;
+    caret-color: #2196f3;
+    color: white;
+}
+
+.urgent-row {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.urgent-clock-icon {
+    width: 50px;
+    margin-left: 30px;
+}
+
+.urgent-clock-row-title {
+    display: inline;
+    margin-left: 25px;
+    font-size: 30px;
+}
+
+.urgent-clock-switch {
+    margin-left: 759px;
+}
