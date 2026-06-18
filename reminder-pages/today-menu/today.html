@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Today List</title>
+        <link rel="stylesheet" href="today.css">
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    </head>
+    <body>
+        <button class="return-home-button js-return-button">
+            <span>&lt;</span>
+        </button>
+
+        <div class="main-container">
+            <p class="container-title">Today</p>
+            <div class="list-container">
+                <p class="morning-title">Morning</p>
+                <div class="morning-container js-morning-container"></div>
+                <div class="separation-line"></div>
+                <p class="afternoon-title">Afternoon</p>
+                <div class="afternoon-container js-afternoon-container"></div>
+                <div class="separation-line"></div>
+                <p class="tonight-title">Tonight</p>
+                <div class="tonight-container js-tonight-container"></div>
+            </div>
+        </div>
+
+        <script type="module" src="today.js"></script>
+    </body>
+</html>
