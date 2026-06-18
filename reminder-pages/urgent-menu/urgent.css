@@ -1,0 +1,224 @@
+body {
+    background-color: black;
+    user-select: none;
+    padding-bottom: 300px;
+}
+
+p {
+    font-family: Arial;
+    margin: 0px;
+    color: white;
+}
+
+.return-home-button {
+    margin: 25px 0px 0px 25px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background-image: linear-gradient(145deg, #2196f3, #1e88e5);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 0 0 2px rgba(79, 195, 247, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.return-home-button span {
+    color: #7fe8d5;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.return-home-button:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 0 0 3px rgba(79, 195, 247, 0.6);
+}
+
+.return-home-button:active {
+    transform: scale(0.97);
+}
+
+.main-container {
+    margin: 100px 0px 0px 100px;
+}
+
+.container-title {
+    font-size: 70px;
+    font-weight: bold;
+    color: #ff3774;
+    margin-bottom: 20px;
+}
+
+.morning-title {
+    font-size: 28px;
+    color: gray;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.afternoon-title {
+    font-size: 28px;
+    color: gray;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tonight-title {
+    font-size: 28px;
+    color: gray;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.separation-line {
+    height: 1px;
+    width: 700px;
+    background-color: gray;
+    margin: 10px 0px 10px 0px;
+}
+
+.morning-container {
+    margin-bottom: 20px;
+}
+
+.circle-checkbox input[type="checkbox"] {
+    /* Remove default browser appearance */
+    appearance: none;
+    -webkit-appearance: none;
+
+    /* Create equal proportions and make it a circle */
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    /* Initial border and background states */
+    border: 2px solid #626262;
+    background-color: transparent;
+    margin-right: 10px;
+
+    /* Smooth color transition when toggling */
+    transition: all 0.2s ease-in-out;
+    display: grid;
+    place-content: center;
+
+    cursor: pointer;
+}
+
+.circle-checkbox input[type="checkbox"]:checked {
+    background-color: #0075ff;
+    border-color: #0075ff;
+}
+
+.todo-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.todo-container-title {
+    font-size: 25px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.todo-container-title-urgent {
+    color: red;
+}
+
+.todo-container-notes {
+    display: block;
+    width: 100%;
+    margin-left: 34px;
+    margin-top: 10px;
+    color: lightgray;
+    font-size: 18px;
+}
+
+.todo-container-time {
+    display: block;
+    width: 100%;
+    margin-left: 34px;
+    margin-top: 5px;
+    color: gray;
+    font-size: 15px;
+}
+
+.time-text {
+    color: rgb(0, 255, 0);
+}
+
+.todo-container-date {
+    display: block;
+    width: 100%;
+    margin-left: 34px;
+    margin-top: 5px;
+    color: gray;
+    font-size: 15px;
+}
+
+.date-text {
+    color: rgb(0, 255, 234);
+}
+
+.todo-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.todo-delete-button {
+    background-color: rgb(0, 81, 255);
+    border: none;
+    color: lightblue;
+    margin-left: 75px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    font-weight: bold;
+}
+
+.todo-delete-button:hover {
+    transform: scale(1.1);
+}
+
+.todo-delete-button:active {
+    transform: scale(0.975);
+}
+
+.todo-container-url {
+    display: block;
+    width: 100%;
+    margin-left: 34px;
+    margin-top: 5px;
+    color: gray;
+    font-size: 15px;
+}
+
+.url-link {
+    color: #005fee;
+}
+
+.list-container {
+    margin-bottom: 20px;
+}
+
+.flag-button {
+    background-color: rgb(255, 196, 0);
+    border: none;
+    border-radius: 20px;
+    color: rgb(105, 51, 0);
+    font-weight: bold;
+    margin-left: 10px;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.flag-button:hover {
+    transform: scale(1.1);
+}
+
+.flag-button:active {
+    transform: scale(0.975);
+}
